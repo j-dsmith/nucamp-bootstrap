@@ -1,0 +1,41 @@
+/* sets font family of entire body to opens sans, fallback of sans-serif */
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* sets font family of all h1, h2, h3 elements to Lobster, fallback cursive */
+h1,
+h2,
+h3 {
+  font-family: "Lobster", cursive;
+}
+
+/* sets h2 font color */
+h2 {
+  color: #3046c5;
+}
+
+/* sets font color of any h2 that is a child of header */
+header h2 {
+  color: #cec8ff;
+}
+
+/* /* gives the footer a background linear gradient from light purple to white, adds 20px padding to top and bottom and none to right and left */
+footer {
+  background-image: linear-gradient(#cec8ff, white);
+  padding: 20px 0;
+}
+
+/* adds 30px padding to all sides of jumbtron class, adds linear gradient changing to the right, sets font color to white */
+.jumbotron {
+  padding: 30px;
+  background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
+  color: white;
+}
+
+/* styles row-content custom class, adds 50px padding top/bottom, 0 right/left. adds 1px ridged border to bottom. sets minimum height to 200px */
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
