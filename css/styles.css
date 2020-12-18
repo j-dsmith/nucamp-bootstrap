@@ -21,7 +21,7 @@ header h2 {
 }
 
 /* /* gives the footer a background linear gradient from light purple to white, adds 20px padding to top and bottom and none to right and left */
-footer {
+.site-footer {
   background-image: linear-gradient(#cec8ff, white);
   padding: 20px 0;
 }
