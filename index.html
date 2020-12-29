@@ -191,14 +191,9 @@
               <span class="sr-only">Next</span>
             </a>
             <!-- ? carousel play/pause button controls -->
-            <div class="btn-group" id="carouselButton">
-              <button class="btn btn-danger btn-sm" id="carouselPause">
-                <i class="fa fa-pause"></i>
-              </button>
-              <button class="btn btn-danger btn-sm" id="carouselPlay">
-                <i class="fa fa-play"></i>
-              </button>
-            </div>
+            <button class="btn btn-danger btn-sm" id="carouselButton">
+              <i class="fa fa-pause"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -289,11 +284,20 @@
     <script>
       $(function () {
         $(".carousel").carousel({ interval: 2000, pause: "false" });
-        $("#carouselPause").click(function () {
-          $(".carousel").carousel("pause");
-        });
-        $("#carouselPlay").click(function () {
-          $(".carousel").carousel("cycle");
+        // toggle carousel button class on click
+        $("#carouselButton").click(function () {
+          // on click check if carousel button is set to pause using icon class
+          //if paused, run carousel pause method, remove pause class, apply play class
+          if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+            $(".carousel").carousel("pause");
+            $("#carouselButton").children("i").removeClass("fa-pause");
+            $("#carouselButton").children("i").addClass("fa-play");
+            //on click if class is set to play, run carousel cycle method, remove play class, add pause class
+          } else {
+            $(".carousel").carousel("cycle");
+            $("#carouselButton").children("i").removeClass("fa-play");
+            $("#carouselButton").children("i").addClass("fa-pause");
+          }
         });
       });
     </script>
