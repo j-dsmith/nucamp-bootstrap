@@ -1,50 +1,73 @@
+$color-primary: #3046c5;
+$color-secondary: #5637dd;
+$color-pale: #cec8ff;
+$color-mid: #901cad;
+$color-dark: #60106b;
+$color-black-transparent: rgba(0, 0, 0, 0.5);
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
+
 /* sets font family of entire body to opens sans, fallback of sans-serif */
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: $body-font;
+}
 
 /* sets font family of all h1, h2, h3 elements to Lobster, fallback cursive */
 h1,
 h2,
 h3 {
-  font-family: "Lobster", cursive; }
+  font-family: $header-font;
+}
 
 /* sets h2 font color */
 h2 {
-  color: #3046c5; }
+  color: $color-primary;
+}
 
 /* sets font color of any h2 that is a child of header */
-header h2 {
-  color: #cec8ff; }
+header {
+  h2 {
+    color: $color-pale;
+  }
+}
 
 /* /* gives the footer a background linear gradient from light purple to white, adds 20px padding to top and bottom and none to right and left */
 .site-footer {
-  background-image: linear-gradient(#cec8ff, white);
-  padding: 20px 0; }
+  background-image: linear-gradient($color-pale, white);
+  padding: 20px 0;
+}
 
 /* adds 30px padding to all sides of jumbtron class, adds linear gradient changing to the right, sets font color to white */
 .jumbotron {
   padding: 30px;
-  background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
+  background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark);
   color: white;
-  margin: 0; }
+  margin: 0;
+}
 
 /* styles row-content custom class, adds 50px padding top/bottom, 0 right/left. adds 1px ridged border to bottom. sets minimum height to 200px */
 .row-content {
   padding: 50px 0;
   border-bottom: 1px ridge;
-  min-height: 200px; }
+  min-height: 200px;
+}
 
 .navbar {
-  background-color: #901cad; }
+  background-color: $color-mid;
+}
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: $color-black-transparent;
+}
 
 .carousel {
-  border: solid #5637dd; }
+  border: solid $color-secondary;
+}
 
 #carouselButton {
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 100; }
+  z-index: 100;
+}
