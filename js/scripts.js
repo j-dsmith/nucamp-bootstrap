@@ -15,4 +15,13 @@ $(function () {
       $("#carouselButton").children("i").addClass("fa-pause");
     }
   });
+
+  // click event for reserve and login buttons to show reservation modal
+  $("#reserveButton").click(() => {
+    $("#reserveModal").modal("show");
+  });
+
+  $("#loginButton").click(() => {
+    $("#loginModal").modal("show");
+  });
 });
